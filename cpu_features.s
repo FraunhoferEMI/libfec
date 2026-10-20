@@ -1,7 +1,8 @@
 .text
 .global cpu_features
 	.type cpu_features,@function
-cpu_features:	
+
+cpu_features:
 	pushl %ebx
 	pushl %ecx
 	pushl %edx
@@ -12,4 +13,3 @@ cpu_features:
 	popl %ecx
 	popl %ebx
 	ret
-	

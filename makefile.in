@@ -41,7 +41,7 @@ test: vtest27 vtest29 vtest39 vtest615 rstest dtest sumsq_test peaktest
 	./vtest615
 
 install: all
-	mkdir -p @libdir@ 
+	mkdir -p @libdir@
 	install -m 644 -p $(SHARED_LIB) libfec.a @libdir@
 #	(cd @libdir@;ln -f -s $(SHARED_LIB) libfec.so)
 #	@REBIND@
@@ -75,7 +75,7 @@ rstest: rstest.o exercise_rs_char.o exercise_rs_int.o exercise_rs_8.o exercise_r
 	gcc -g -o $@ $^
 
 rs_speedtest: rs_speedtest.o libfec.a
-	gcc -g -o $@ $^	
+	gcc -g -o $@ $^
 
 # for some reason, the test programs without args segfault on the PPC with -O2 optimization. Dunno why - compiler bug?
 vtest27.o: vtest27.c fec.h
@@ -250,4 +250,3 @@ clean:
 
 distclean: clean
 	rm -f config.log config.cache config.status config.h makefile
-
