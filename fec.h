@@ -342,6 +342,3 @@ unsigned long long sumsq_av(signed short *in,int cnt);
 int cpu_features(void);
 
 #endif /* _FEC_H_ */
-
-
-
